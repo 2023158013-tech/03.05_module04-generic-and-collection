@@ -1,6 +1,7 @@
 package com.wanted.b_collection.a_list.run;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -38,5 +39,22 @@ public class Application01 {
             System.out.println(i + " : " + list.get(i));
         }
 
+
+        list.add(1, "banana");
+        System.out.println("list = " + list);
+        
+        list.remove(2);
+        System.out.println("list = " + list);
+
+        System.out.println("===================================");
+        //제네릭 개념을 사용해서 String 값만 들어가는 List 생성
+        List<String> stringList = new ArrayList<>();
+        stringList.add("a");
+        stringList.add("c");
+        stringList.add("d");
+        stringList.add("b");
+        System.out.println("stringList = " + stringList);
+        Collections.sort(stringList);
+        System.out.println("stringList = " + stringList);
     }
 }
